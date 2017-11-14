@@ -1,2 +1,2 @@
 # euler
-Project euler solutions
+[Project euler](https://projecteuler.net/) solutions
