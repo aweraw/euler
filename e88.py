@@ -8,7 +8,7 @@ def factor_combinations(limit):
         yield factors
         factors[-1] += 1
         if prod(factors) > limit:
-            for i in range(1, llen+1):
+            for i in xrange(1, llen+1):
                 if factors[-i] > limit**(1.0/i) / prod(factors[:-i]):
                     if i == llen:
                         # next power of 2
@@ -16,7 +16,7 @@ def factor_combinations(limit):
                         factors = [2 for x in xrange(llen)]
                     else:
                         factors[-(i+1)] += 1
-                        factors[-i:] = [factors[-(i+1)] for x in xrange(len(factors[-i:]))]
+                        factors[-i:] = [factors[-(i+1)] for x in xrange(i)]
                         if prod(factors) <= limit:
                             break
 
@@ -32,3 +32,6 @@ def answer(n=12000):
     valid = set(v for k,v in ks_dict.items() if k <= n)
 
     return sum(valid)
+
+if __name__ == "__main__":
+    print answer()
