@@ -1,7 +1,7 @@
 # https://en.wikipedia.org/wiki/Approximation_theory
 # https://en.wikipedia.org/wiki/Lagrange_polynomial
 
-from functools import reduce, partial
+from functools import reduce
 from operator import mul
 
 def d10polynominal(n):
