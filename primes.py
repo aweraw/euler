@@ -45,5 +45,6 @@ def prime_factors(n):
         if len(pfs) == 0:
             pfs_dict[n] = [n]
         else:
-            pfs_dict[n] = pfs + prime_factors(n/product)
+            pfs_dict[n] = pfs + prime_factors(int(n/product))
+        pfs_dict[n].sort()
         return pfs_dict[n]
